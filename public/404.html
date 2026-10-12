@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noindex, nofollow">
+  <meta
+    name="description"
+    content="The requested page could not be found on yusufkilic.dev."
+  >
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <title>404 — Page Not Found | Yusuf Kılıç</title>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #0a0a0a;
+      --foreground: #ededed;
+      --muted: #737373;
+      --border: #1f1f1f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+
+      background: var(--background);
+      color: var(--foreground);
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    main {
+      width: 100%;
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      margin: 0 0 1.5rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .error-code {
+      display: block;
+      margin-bottom: 1rem;
+      color: var(--muted);
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--foreground);
+      font-size: clamp(3rem, 10vw, 6.5rem);
+      font-weight: 700;
+      letter-spacing: -0.06em;
+      line-height: 0.95;
+    }
+
+    .message {
+      max-width: 520px;
+      margin: 2rem 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 1.7;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.75rem 1rem;
+
+      border: 1px solid var(--border);
+      border-radius: 6px;
+
+      color: var(--foreground);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .button.primary {
+      background: var(--foreground);
+      border-color: var(--foreground);
+      color: var(--background);
+    }
+
+    .button:hover {
+      border-color: #525252;
+      text-decoration: none;
+    }
+
+    .button.primary:hover {
+      background: #d4d4d4;
+      border-color: #d4d4d4;
+    }
+
+    .button:focus-visible {
+      outline: 2px solid var(--foreground);
+      outline-offset: 4px;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+
+      color: #525252;
+      font-size: 0.8rem;
+    }
+
+    a:not(.button) {
+      color: var(--foreground);
+      text-decoration: none;
+    }
+
+    a:not(.button):hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      main {
+        animation: appear 0.7s ease-out both;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .button {
+        transition:
+          background 0.2s ease,
+          border-color 0.2s ease;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <p class="eyebrow">
+      <a href="/">yusufkilic.dev</a>
+    </p>
+
+    <span class="error-code" aria-label="Error 404">404</span>
+
+    <h1>Page<br>not found.</h1>
+
+    <p class="message">
+      Looks like you've wandered off the path.
+      The page you're looking for doesn't exist
+      or may have been moved.
+    </p>
+
+    <nav class="actions" aria-label="Error page actions">
+      <a class="button primary" href="/">Back to homepage &rarr;</a>
+      <a class="button" href="javascript:history.back()">Go back</a>
+    </nav>
+
+    <footer>
+      &copy; <span id="year"></span> Yusuf Kılıç
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
